@@ -2,15 +2,15 @@
   <Panel>
     <div slot="panel-header">
       <h1>题目列表</h1>
-      <div class="search-nav">
-        <Input v-model="search.info">
-        <Select v-model="search.select" slot="prepend" style="width: 80px">
-          <Option value="id">id</Option>
-          <Option value="keyword">keyword</Option>
-        </Select>
-        <Button slot="append" icon="ios-search"></Button>
-        </Input>
-      </div>
+      <!--<div class="search-nav">-->
+        <!--<Input v-model="search.info">-->
+        <!--<Select v-model="search.select" slot="prepend" style="width: 80px">-->
+          <!--<Option value="id">id</Option>-->
+          <!--<Option value="keyword">keyword</Option>-->
+        <!--</Select>-->
+        <!--<Button slot="append" icon="ios-search"></Button>-->
+        <!--</Input>-->
+      <!--</div>-->
     </div>
     <Card slot="panel-body">
       <Table :columns="head" :data="problem_data"></Table>
@@ -59,7 +59,7 @@
                     }
                   },
                   style: {
-                    padding: '2px 0'
+                    padding: 0
                   }
                 }, params.row.title)
               }
