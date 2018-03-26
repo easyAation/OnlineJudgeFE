@@ -1,5 +1,5 @@
 <template>
-  <Panel>
+  <ListPanel>
     <div slot="panel-header">
       <h1>题目列表</h1>
       <!--<div class="search-nav">-->
@@ -18,19 +18,19 @@
     <div slot="panel-page">
       <Page :total="100" show-sizer show-total></Page>
     </div>
-  </Panel>
+  </ListPanel>
 </template>
 
 <script>
 
-  import Panel from '../Panel'
+  import ListPanel from '../ListPanel'
   import Input from "iview/src/components/input/input";
 
     export default {
       name: "problem-list",
       components: {
         Input,
-        Panel
+        ListPanel
       },
       data() {
         return {
