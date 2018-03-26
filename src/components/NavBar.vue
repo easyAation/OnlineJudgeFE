@@ -11,7 +11,7 @@
           <Icon type="navicon"/>
           <span>问题列表</span>
         </MenuItem>
-        <MenuItem name="content-list">
+        <MenuItem name="/content-list">
           <Icon type="trophy"/>
           <span>比赛列表</span>
         </MenuItem>
