@@ -1,5 +1,5 @@
 <template>
-  <Panel>
+  <ListPanel>
     <div slot="panel-header">
       <h1>竞赛列表</h1>
     </div>
@@ -9,20 +9,20 @@
     <div slot="panel-page">
       <Page :total="100" show-sizer show-total></Page>
     </div>
-  </Panel>
+  </ListPanel>
 
 </template>
 
 <script>
 
-  import Panel from '../Panel'
+  import ListPanel from '../ListPanel'
   import Card from "iview/src/components/card/card";
 
   export default {
     name: "content-list",
     components: {
       Card,
-      Panel
+      ListPanel
     },
     data() {
       return {
