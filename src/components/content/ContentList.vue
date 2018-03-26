@@ -29,11 +29,14 @@
         head: [
           {
             title: '编号',
-            key: 'id'
+            key: 'id',
+            width: 100,
+            sortType: 'desc'
           },
           {
             title: '竞赛名称',
             key: 'title',
+            width:500,
             render: (h, params) => {
               return h('Button', {
                 props: {
@@ -54,6 +57,8 @@
           {
             title: '状态',
             key: 'state',
+            width:150,
+            align: 'center',
             filters: [
               {
                 label: '进行中',
@@ -75,11 +80,14 @@
           },
           {
             title: '截止时间',
-            key: 'dead_time'
+            key: 'dead_time',
+            width: 200,
+            align: 'center'
           },
           {
             title: '类型',
             key: 'type',
+            align: 'center',
             filters: [
               {
                 label: '公有',

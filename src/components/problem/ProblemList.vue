@@ -43,10 +43,12 @@
               title: '编号',
               key: 'id',
               sortable: true,
+              width: 100
             },
             {
               title: '题目',
               key: 'title',
+              width: 400,
               render: (h, params) => {
                 return h('Button', {
                   props: {
@@ -66,20 +68,28 @@
             },
             {
               title: '来源',
-              key: 'source'
+              key: 'source',
+              width: 200,
+              align: 'center'
             },
             {
               title: '正确数',
-              key: 'right'
+              key: 'right',
+              width: 150,
+              align: 'center'
             },
             {
               title: '提交数',
-              key: 'submit'
+              key: 'submit',
+              width: 150,
+              align: 'center'
             },
             {
               title: '正确率',
               key: 'ac',
-              sortable: true
+              sortable: true,
+              width: 150,
+              align: 'center'
             }
           ],
           problem_data: [
