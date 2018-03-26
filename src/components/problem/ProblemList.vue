@@ -43,12 +43,12 @@
               title: '编号',
               key: 'id',
               sortable: true,
-              width: 100
+              width: 100,
+              align: 'center'
             },
             {
               title: '题目',
               key: 'title',
-              width: 400,
               render: (h, params) => {
                 return h('Button', {
                   props: {
@@ -69,7 +69,7 @@
             {
               title: '来源',
               key: 'source',
-              width: 200,
+              width: 220,
               align: 'center'
             },
             {

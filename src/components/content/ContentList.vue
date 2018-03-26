@@ -31,12 +31,12 @@
             title: '编号',
             key: 'id',
             width: 100,
+            align: 'center',
             sortType: 'desc'
           },
           {
             title: '竞赛名称',
             key: 'title',
-            width:500,
             render: (h, params) => {
               return h('Button', {
                 props: {
@@ -88,6 +88,7 @@
             title: '类型',
             key: 'type',
             align: 'center',
+            width: 150,
             filters: [
               {
                 label: '公有',
