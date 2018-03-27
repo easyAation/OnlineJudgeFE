@@ -4,7 +4,7 @@
       <h1>解题排名</h1>
     </div>
     <card slot="panel-body">
-      <Table :columns="head" :data="achievement_data"></Table>
+      <Table :columns="head" :data="ac_data"></Table>
     </card>
     <div slot="panel-page">
       <Page :total="100" show-sizer show-total></Page>
@@ -23,7 +23,7 @@
       Card,
       ListPanel
     },
-    name: "achievement-rank",
+    name: "ac-rank",
     data() {
       return {
         head: [
