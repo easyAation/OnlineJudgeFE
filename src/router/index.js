@@ -5,6 +5,7 @@ import ProblemList from '@/components/problem/ProblemList'
 import Problem from '@/components/problem/Problem'
 import ContentList from '@/components/content/ContentList'
 import Content from '@/components/content/Content'
+import Status from '@/components/Status'
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/content/:id',
       name: 'Content',
       component: Content
+    },
+    {
+      path: '/status',
+      name: 'Status',
+      component: Status
     }
   ]
 })

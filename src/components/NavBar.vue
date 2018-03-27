@@ -15,7 +15,7 @@
           <Icon type="trophy"/>
           <span>比赛列表</span>
         </MenuItem>
-        <MenuItem name="state">
+        <MenuItem name="/status">
           <Icon type="home"/>
           <span>评判状态</span>
         </MenuItem>
