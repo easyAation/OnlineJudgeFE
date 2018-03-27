@@ -6,6 +6,7 @@ import Problem from '@/components/problem/Problem'
 import ContentList from '@/components/content/ContentList'
 import Content from '@/components/content/Content'
 import Status from '@/components/Status'
+import ACRank from '@/components/rank/ACRank'
 
 Vue.use(Router);
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/status',
       name: 'Status',
       component: Status
+    },
+    {
+      path: '/ac-rank',
+      name: 'ACRank',
+      component: ACRank
     }
   ]
 })

@@ -24,11 +24,11 @@
             <Icon type="podium"/>
             <span>排名</span>
           </template>
-          <MenuItem name="ac-rank">
+          <MenuItem name="/ac-rank">
             <Icon type="ribbon-a"/>
             <span>解题排名</span>
           </MenuItem>
-          <MenuItem name="achieve-rank">
+          <MenuItem name="/achievement-rank">
             <Icon type="ribbon-b"/>
             <span>成就排名</span>
           </MenuItem>
