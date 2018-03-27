@@ -79,7 +79,7 @@
             sortable: true
           }
         ],
-        achievement_data: [
+        ac_data: [
           {
             user_id: 'admin',
             user_name: 'admin',
