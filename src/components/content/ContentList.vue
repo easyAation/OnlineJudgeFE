@@ -56,7 +56,7 @@
           },
           {
             title: '状态',
-            key: 'state',
+            key: 'status',
             width:150,
             align: 'center',
             filters: [
@@ -72,10 +72,19 @@
             filterMultiple: false,
             filterMethod (value, row) {
               if (value === 1) {
-                return row.state === '进行中';
+                return row.status === '进行中';
               } else if (value === 2) {
-                return row.state === '已结束';
+                return row.status === '已结束';
               }
+            },
+            render: (h, params) => {
+              const color = params.row.status === '进行中' ? 'green' : 'red';
+              return h('Tag', {
+                props: {
+                  type: 'dot',
+                  color: color
+                }
+              }, params.row.status);
             }
           },
           {
@@ -113,21 +122,21 @@
           {
             id: '1001',
             title: '测试竞赛',
-            state: '进行中',
+            status: '进行中',
             dead_time: '2018-4-1',
             type: '公有'
           },
           {
             id: '1002',
             title: '测试竞赛名字很长名字很长很长很长很长应该不会长到这个程度了或者还能再长一点',
-            state: '已结束',
+            status: '已结束',
             dead_time: '2018-1-1',
             type: '私有'
           },
           {
             id: '1003',
             title: '测试竞赛',
-            state: '进行中',
+            status: '进行中',
             dead_time: '2018-4-1',
             type: '公有'
           }
