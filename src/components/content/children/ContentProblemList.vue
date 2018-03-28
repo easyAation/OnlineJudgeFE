@@ -25,9 +25,11 @@
                   },
                   on: {
                     click: () => {
-                      const path = this.$route.params.id +'/problem/' + params.row.id;
-                      console.log(path);
-                      this.$router.push(path)
+                      const ProblemID = params.row.id;
+                      this.$router.push({
+                        name: 'ContentProblem',
+                        params: {id: ProblemID}
+                      })
                     }
                   },
                   style: {

@@ -1,6 +1,6 @@
 <template>
   <Card dis-hover class="describe-card">
-    <h1 style="margin-top: 20px">问题：{{this.$route.params.id}}{{problem.title}}</h1>
+    <h1 style="margin-top: 20px">问题：{{problem.id}}{{problem.title}}</h1>
     <div class="limit-info">
       <span>Time Limit:{{problem.time_limit}}</span>
       <span>Memory Limit:{{problem.memory_limit}}</span>
@@ -72,6 +72,9 @@
             author: 'admin'
           }
         }
+      },
+      mounted() {
+        this.problem.id = this.$route.params.id
       }
     }
 </script>

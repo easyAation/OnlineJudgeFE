@@ -11,6 +11,7 @@ import AchievementRank from '@/components/rank/AchievementRank'
 import ContentProblemList from '@/components/content/children/ContentProblemList'
 import ContentStatus from '@/components/content/children/ContentStatus'
 import ContentProblem from '@/components/content/children/Contentproblem'
+import ContentRank from '@/components/content/children/ContentRank'
 
 Vue.use(Router);
 
@@ -60,6 +61,11 @@ export default new Router({
           path: 'status',
           name: 'ContentStatus',
           component: ContentStatus
+        },
+        {
+          path: 'rank',
+          name: 'ContentRank',
+          component: ContentRank
         }
       ]
     },
