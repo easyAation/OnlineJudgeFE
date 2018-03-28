@@ -28,7 +28,7 @@
                       const ProblemID = params.row.id;
                       this.$router.push({
                         name: 'ContentProblem',
-                        params: {id: ProblemID}
+                        params: {ProblemID: ProblemID}
                       })
                     }
                   },

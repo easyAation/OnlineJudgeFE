@@ -1,7 +1,7 @@
 <template>
   <list-panel>
     <div slot="panel-header">
-      <h1>竞赛：{{this.$route.params.id}}</h1>
+      <h1>竞赛：{{ContentInfo.id}}</h1>
     </div>
     <Layout slot="panel-body">
       <Row>
@@ -10,6 +10,7 @@
         </i-col>
         <i-col span="5">
           <Card class="sider-card">
+            {{ContentInfo.id}}
             <ul class="info">
               <li>开始时间：</li>
               <li>结束时间：</li>
@@ -27,7 +28,7 @@
                 <Icon type="load-a"></Icon>
                 <span>状态</span>
               </menu-item>
-              <menu-item name="">
+              <menu-item name="/rank">
                 <Icon type="podium"></Icon>
                 <span>排名</span>
               </menu-item>

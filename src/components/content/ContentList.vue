@@ -45,11 +45,11 @@
                 },
                 on: {
                   click: () => {
-                    const ConstID = params.row.id;
+                    const ContestID = params.row.id;
                     //用路径进行路径跳转，避免名称进行跳转后页面显示异常（不显示默认子路由）
                     this.$router.push({
                       path: '/content/'+params.row.id,
-                      params:{id:ConstID}
+                      params:{id:ContestID}
                     })
                   }
                 },
