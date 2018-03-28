@@ -27,16 +27,17 @@
     data() {
       return {
         head: [
+          {title: ' '},
           {
             title: '排名',
             type: 'index',
-            width: 100,
+            width: 60,
             align: 'center',
           },
           {
             title: '用户名',
             key: 'user_id',
-            // width: 150,
+            width: 150,
             align: 'center',
           },
           {
@@ -77,7 +78,8 @@
             width: 100,
             align: 'center',
             sortable: true
-          }
+          },
+          {title: ' '},
         ],
         ac_data: [
           {

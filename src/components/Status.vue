@@ -27,6 +27,10 @@
     data() {
       return {
         head: [
+          //空列，手动自适应补全大屏
+          {
+            title: '  '
+          },
           {
             title: '运行编号',
             key: 'run_id',
@@ -49,7 +53,7 @@
           {
             title: '运行结果',
             key: 'result',
-            width: 200,
+            width: 175,
             align: 'center',
             render: (h, params) => {
               const row = params.row;
@@ -70,7 +74,7 @@
               const color = status === 1 ? 'blue' : status === 2 ? 'green' : status === 3 ? 'yellow' : 'red';
               return h('Tag', {
                 props: {
-                  // type: 'border',
+                  type: 'border',
                   color: color
                 }
               }, row.result);
@@ -79,13 +83,13 @@
           {
             title: '内存',
             key: 'memory',
-            width: 100,
+            width:90,
             align: 'center'
           },
           {
             title: '耗时',
             key: 'time',
-            width: 100,
+            width: 90,
             align: 'center'
           },
           {
@@ -103,7 +107,12 @@
           {
             title: '提交时间',
             key: 'submit_time',
+            width: 180,
             align: 'center'
+          },
+          //空列，手动自适应补全大屏
+          {
+            title: '  '
           }
         ],
         status_data: [
@@ -213,5 +222,7 @@
 </script>
 
 <style scoped>
-
+  .ivu-table .demo-table-info-row td div{
+    padding: 0;
+  }
 </style>
