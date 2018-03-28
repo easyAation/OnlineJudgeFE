@@ -8,6 +8,9 @@ import Content from '@/components/content/Content'
 import Status from '@/components/Status'
 import ACRank from '@/components/rank/ACRank'
 import AchievementRank from '@/components/rank/AchievementRank'
+import ContentProblemList from '@/components/content/children/ContentProblemList'
+import ContentStatus from '@/components/content/children/ContentStatus'
+import ContentProblem from '@/components/content/children/Contentproblem'
 
 Vue.use(Router);
 
@@ -36,7 +39,29 @@ export default new Router({
     {
       path: '/content/:id',
       name: 'Content',
-      component: Content
+      component: Content,
+      children: [
+        {
+          path: '',
+          name: 'ContentProblemList',
+          component: ContentProblemList
+        },
+        {
+          path: 'problem-list',
+          name: 'ContentProblemList',
+          component: ContentProblemList
+        },
+        {
+          path: 'problem/:id',
+          name: 'ContentProblem',
+          component: ContentProblem
+        },
+        {
+          path: 'status',
+          name: 'ContentStatus',
+          component: ContentStatus
+        }
+      ]
     },
     {
       path: '/status',
