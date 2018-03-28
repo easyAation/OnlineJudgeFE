@@ -10,7 +10,7 @@
   import SubmitItem from '../../problem/SubmitItem'
 
   export default {
-    name: "content-problem",
+    name: "contest-problem",
     components: {
       ProblemItem,
       SubmitItem

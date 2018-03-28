@@ -4,7 +4,7 @@
 
 <script>
     export default {
-        name: "content-problem-list",
+        name: "contest-problem-list",
       data() {
         return {
           head: [
@@ -27,7 +27,7 @@
                     click: () => {
                       const ProblemID = params.row.id;
                       this.$router.push({
-                        name: 'ContentProblem',
+                        name: 'ContestProblem',
                         params: {ProblemID: ProblemID}
                       })
                     }

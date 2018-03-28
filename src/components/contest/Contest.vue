@@ -1,7 +1,7 @@
 <template>
   <list-panel>
     <div slot="panel-header">
-      <h1>竞赛：{{ContentInfo.id}}</h1>
+      <h1>竞赛：{{ContestInfo.id}}</h1>
     </div>
     <Layout slot="panel-body">
       <Row>
@@ -10,7 +10,7 @@
         </i-col>
         <i-col span="5">
           <Card class="sider-card">
-            {{ContentInfo.id}}
+            {{ContestInfo.id}}
             <ul class="info">
               <li>开始时间：</li>
               <li>结束时间：</li>
@@ -64,16 +64,16 @@
     name: "content",
     methods: {
       handleRoute(route) {
-        const path = '/content/'+this.ContentInfo.id+route;
+        const path = '/contest/'+this.ContestInfo.id+route;
         this.$router.push(path)
       }
     },
     mounted() {
-      this.ContentInfo.id = this.$route.params.id
+      this.ContestInfo.id = this.$route.params.id
     },
     data() {
       return {
-        ContentInfo: {
+        ContestInfo: {
           id: '',
           start_time: '',
           dead_time: '',

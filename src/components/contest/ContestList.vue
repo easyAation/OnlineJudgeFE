@@ -4,7 +4,7 @@
       <h1>竞赛列表</h1>
     </div>
     <Card slot="panel-body">
-      <Table :columns="head" :data="content_data"></Table>
+      <Table :columns="head" :data="contest_data"></Table>
     </Card>
     <div slot="panel-page">
       <Page :total="100" show-sizer show-total></Page>
@@ -19,7 +19,7 @@
   import Card from "iview/src/components/card/card";
 
   export default {
-    name: "content-list",
+    name: "contest-list",
     components: {
       Card,
       ListPanel
@@ -48,7 +48,7 @@
                     const ContestID = params.row.id;
                     //用路径进行路径跳转，避免名称进行跳转后页面显示异常（不显示默认子路由）
                     this.$router.push({
-                      path: '/content/'+params.row.id,
+                      path: '/contest/'+params.row.id,
                       params:{id:ContestID}
                     })
                   }
@@ -123,7 +123,7 @@
             }
           }
         ],
-        content_data: [
+        contest_data: [
           {
             id: '1001',
             title: '测试竞赛',

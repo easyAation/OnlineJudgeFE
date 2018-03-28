@@ -9,7 +9,7 @@
 
   export default {
     components: {Table},
-    name: "content-rank",
+    name: "contest-rank",
     data() {
       return {
         ContestID: '',
@@ -145,7 +145,7 @@
                 },
                 on: {
                   click: () => {
-                    const path = '/content/'+this.ContestID+'/problem/'+problem.id;
+                    const path = '/contest/'+this.ContestID+'/problem/'+problem.id;
                     this.$router.push({
                       path: path,
                       params: {ProblemID: problem.id}

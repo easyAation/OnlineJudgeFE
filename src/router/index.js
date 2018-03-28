@@ -3,15 +3,15 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import ProblemList from '@/components/problem/ProblemList'
 import Problem from '@/components/problem/Problem'
-import ContentList from '@/components/content/ContentList'
-import Content from '@/components/content/Content'
+import ContestList from '@/components/contest/ContestList'
+import Contest from '@/components/contest/Contest'
 import Status from '@/components/Status'
 import ACRank from '@/components/rank/ACRank'
 import AchievementRank from '@/components/rank/AchievementRank'
-import ContentProblemList from '@/components/content/children/ContentProblemList'
-import ContentStatus from '@/components/content/children/ContentStatus'
-import ContentProblem from '@/components/content/children/Contentproblem'
-import ContentRank from '@/components/content/children/ContentRank'
+import ContestProblemList from '@/components/contest/children/ContestProblemList'
+import ContestStatus from '@/components/contest/children/ContestStatus'
+import ContestProblem from '@/components/contest/children/Contestproblem'
+import ContestRank from '@/components/contest/children/ContestRank'
 
 Vue.use(Router);
 
@@ -33,39 +33,39 @@ export default new Router({
       component: Problem
     },
     {
-      path: '/content-list',
-      name: 'ContentList',
-      component: ContentList
+      path: '/contest-list',
+      name: 'ContestList',
+      component: ContestList
     },
     {
-      path: '/content/:id',
-      name: 'Content',
-      component: Content,
+      path: '/contest/:id',
+      name: 'Contest',
+      component: Contest,
       children: [
         {
           path: '',
-          name: 'ContentProblemList',
-          component: ContentProblemList
+          name: 'ContestProblemList',
+          component: ContestProblemList
         },
         {
           path: 'problem-list',
-          name: 'ContentProblemList',
-          component: ContentProblemList
+          name: 'ContestProblemList',
+          component: ContestProblemList
         },
         {
           path: 'problem/:id',
-          name: 'ContentProblem',
-          component: ContentProblem
+          name: 'ContestProblem',
+          component: ContestProblem
         },
         {
           path: 'status',
-          name: 'ContentStatus',
-          component: ContentStatus
+          name: 'ContestStatus',
+          component: ContestStatus
         },
         {
           path: 'rank',
-          name: 'ContentRank',
-          component: ContentRank
+          name: 'ContestRank',
+          component: ContestRank
         }
       ]
     },
