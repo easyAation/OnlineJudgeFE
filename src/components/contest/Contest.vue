@@ -10,7 +10,7 @@
         </i-col>
         <i-col span="5">
           <Card class="sider-card">
-            {{ContestInfo.id}}
+            <p>竞赛:{{ContestInfo.id}}</p>
             <ul class="info">
               <li>开始时间：</li>
               <li>结束时间：</li>
@@ -20,15 +20,15 @@
           </Card>
           <Card class="sider-card">
             <Menu @on-select="handleRoute" style="width: 100%">
-              <menu-item name="/problem-list">
+              <menu-item name="ContestProblemList">
                 <Icon type="document-text"></Icon>
                 <span>问题列表</span>
               </menu-item>
-              <menu-item name="/status">
+              <menu-item name="ContestStatus">
                 <Icon type="load-a"></Icon>
                 <span>状态</span>
               </menu-item>
-              <menu-item name="/rank">
+              <menu-item name="ContestRank">
                 <Icon type="podium"></Icon>
                 <span>排名</span>
               </menu-item>
@@ -64,12 +64,15 @@
     name: "content",
     methods: {
       handleRoute(route) {
-        const path = '/contest/'+this.ContestInfo.id+route;
-        this.$router.push(path)
+        // const path = '/contest/'+this.ContestInfo.id+route;
+        this.$router.push({
+          name: route,
+          params: {ContestID: this.ContestInfo.id}
+        })
       }
     },
     mounted() {
-      this.ContestInfo.id = this.$route.params.id
+      this.ContestInfo.id = this.$route.params.ContestID
     },
     data() {
       return {

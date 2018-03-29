@@ -28,7 +28,7 @@ export default new Router({
       component: ProblemList
     },
     {
-      path: '/problem/:id',
+      path: '/problem/:ProblemID',
       name: 'Problem',
       component: Problem
     },
@@ -38,13 +38,13 @@ export default new Router({
       component: ContestList
     },
     {
-      path: '/contest/:id',
+      path: '/contest/:ContestID',
       name: 'Contest',
       component: Contest,
       children: [
         {
           path: '',
-          name: 'ContestProblemList',
+          name: 'ContestDefault',
           component: ContestProblemList
         },
         {
@@ -53,7 +53,7 @@ export default new Router({
           component: ContestProblemList
         },
         {
-          path: 'problem/:id',
+          path: 'problem/:ProblemID',
           name: 'ContestProblem',
           component: ContestProblem
         },

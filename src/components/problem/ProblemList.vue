@@ -57,7 +57,10 @@
                   },
                   on: {
                     click: () => {
-                      this.$router.push({path: '/problem/'+params.row.id})
+                      this.$router.push({
+                        name: 'Problem',
+                        params: {ProblemID: params.row.id}
+                      })
                     }
                   },
                   style: {

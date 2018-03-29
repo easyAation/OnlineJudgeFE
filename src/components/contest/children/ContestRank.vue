@@ -127,13 +127,12 @@
       }
     },
     mounted() {
-      this.ContestID = this.$route.params.id;
+      this.ContestID = this.$route.params.ContestID;
       this.addTableColumns(this.problems)
     },
     methods: {
       addTableColumns (problems) {
         // 根据题目添加table column
-        console.log(problems.length);
         problems.forEach(problem => {
           this.head.push({
             align: 'center',

@@ -3,15 +3,16 @@
     <Content class="panel">
       <Row style="margin: 20px 0">
         <i-col span="19">
-          <problem-item></problem-item>
+          <problem-item :ProblemID="ProblemID"></problem-item>
         </i-col>
         <i-col span="5">
           <Card class="sider-card">
            空闲中
+            {{ProblemID}}
           </Card>
         </i-col>
         <i-col span="19">
-          <submit-item></submit-item>
+          <submit-item :ProblemID="ProblemID"></submit-item>
         </i-col>
       </Row>
     </Content>
@@ -42,8 +43,11 @@
       name: "problem",
       data() {
         return {
-          msg: '就是占一下这个data'
+          ProblemID: ''
         }
+      },
+      mounted() {
+        this.ProblemID = this.$route.params.ProblemID;
       }
     }
 </script>

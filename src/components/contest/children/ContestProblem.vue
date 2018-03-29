@@ -1,6 +1,6 @@
 <template>
   <div>
-    <problem-item></problem-item>
+    <problem-item :ProblemID="ProblemID"></problem-item>
     <submit-item></submit-item>
   </div>
 </template>
@@ -14,6 +14,14 @@
     components: {
       ProblemItem,
       SubmitItem
+    },
+    data() {
+      return {
+        ProblemID: ''
+      }
+    },
+    mounted() {
+      this.ProblemID = this.$route.params.ProblemID
     }
   }
 </script>

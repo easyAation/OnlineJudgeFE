@@ -49,6 +49,7 @@
   import Row from "iview/src/components/grid/row";
   import ICol from "iview/src/components/grid/col";
     export default {
+      props: ['ProblemID'],
       components: {
         Card,
         Row,
@@ -74,7 +75,7 @@
         }
       },
       mounted() {
-        this.problem.id = this.$route.params.id
+        this.problem.id = this.$route.params.ProblemID
       }
     }
 </script>

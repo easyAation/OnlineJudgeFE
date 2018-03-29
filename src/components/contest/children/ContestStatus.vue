@@ -10,6 +10,7 @@
         name: "cotent-status",
       data() {
         return {
+          ContestID: '',
           head: [
             //空列，手动自适应补全大屏
             {
@@ -201,6 +202,9 @@
             }
           ]
         }
+      },
+      mounted() {
+          this.ContestID = this.$route.params.ContestID
       }
     }
 </script>

@@ -28,6 +28,7 @@
 
     export default {
         name: "submit-item",
+      props: ['ProblemID'],
       components: {
         Card,
         Row,

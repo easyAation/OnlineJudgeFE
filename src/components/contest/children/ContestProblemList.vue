@@ -7,6 +7,7 @@
         name: "contest-problem-list",
       data() {
         return {
+          ContestID: '',
           head: [
             {
               title: '编号',
@@ -26,9 +27,11 @@
                   on: {
                     click: () => {
                       const ProblemID = params.row.id;
+                      const path = '/contest/'+this.ContestID+'/problem/'+params.row.id;
                       this.$router.push({
-                        name: 'ContestProblem',
-                        params: {ProblemID: ProblemID}
+                        path: path
+                        // name: 'ContestProblem',
+                        // params: {ProblemID: ProblemID}
                       })
                     }
                   },
@@ -72,6 +75,9 @@
             }
           ]
         }
+      },
+      mounted() {
+        this.ContestID = this.$route.params.ContestID
       }
     }
 </script>
