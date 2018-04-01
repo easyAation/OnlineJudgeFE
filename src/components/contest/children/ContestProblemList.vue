@@ -1,5 +1,5 @@
 <template>
-  <Table :columns="head" :data="problem_data"></Table>
+  <Table :columns="head" :data="contest_problem_data"></Table>
 </template>
 
 <script>
@@ -11,7 +11,7 @@
           head: [
             {
               title: '编号',
-              key: 'id',
+              key: 'no',
               width: 100,
               align: 'center'
             },
@@ -54,24 +54,27 @@
               align: 'center'
             }
           ],
-          problem_data: [
+          contest_problem_data: [
             {
+              no: 'A',
               id: '1001',
               title: 'HelloWorld',
-              right: '200',
-              submit: '400',
+              right: 200,
+              submit: 400
             },
             {
+              no: 'B',
               id: '1002',
               title: '简单加法',
-              right: '200',
-              submit: '400'
+              right: 200,
+              submit: 400
             },
             {
+              no: 'C',
               id: '1003',
               title: '水仙花数',
-              right: '200',
-              submit: '400'
+              right: 200,
+              submit: 400
             }
           ]
         }

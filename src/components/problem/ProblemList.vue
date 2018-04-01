@@ -89,7 +89,7 @@
             },
             {
               title: '正确率',
-              key: 'ac',
+              key: 'ac_rate',
               sortable: true,
               width: 150,
               align: 'center'
@@ -100,25 +100,25 @@
               id: '1001',
               title: 'HelloWorld',
               source: 'imustacm',
-              right: '200',
-              submit: '400',
-              ac: '50%'
+              right: 200,
+              submit: 400,
+              ac_rate: '50%'
             },
             {
               id: '1002',
               title: '简单加法',
               source: 'imustacm',
-              right: '200',
-              submit: '400',
-              ac: '50%'
+              right: 200,
+              submit: 400,
+              ac_rate: '50%'
             },
             {
               id: '1003',
               title: '水仙花数',
               source: 'imustacm',
-              right: '200',
-              submit: '400',
-              ac: '50%'
+              right: 200,
+              submit: 400,
+              ac_rate: '50%'
             }
         ]
         }
