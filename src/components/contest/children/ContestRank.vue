@@ -73,7 +73,7 @@
             point: 5,
             time: '08:28:31',
             '1001': {
-              is_ac: true,
+              ac: true,
               ac_time: '300s',
               error_number: 0
             },
@@ -113,14 +113,18 @@
             }
           },
         ],
-        problems: [
+        //用题目id来进行操作，题目编号仅仅在显示时使用
+        contest_rank_problems: [
           {
+            no: 'A',
             id: '1001'
           },
           {
+            no: 'B',
             id: '1002'
           },
           {
+            no: 'C',
             id: '1003'
           }
         ]
@@ -128,7 +132,7 @@
     },
     mounted() {
       this.ContestID = this.$route.params.ContestID;
-      this.addTableColumns(this.problems)
+      this.addTableColumns(this.contest_rank_problems)
     },
     methods: {
       addTableColumns (problems) {
@@ -151,7 +155,7 @@
                     })
                   }
                 }
-              }, problem.id)
+              }, problem.no)
             },
             render: (h, params) => {
               if (params.row[problem.id]) {
