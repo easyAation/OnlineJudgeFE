@@ -74,7 +74,7 @@
           },
           {
             title: '正确率',
-            key: 'ac',
+            key: 'ac_rate',
             width: 100,
             align: 'center',
             sortable: true
@@ -89,7 +89,7 @@
             class: '软件工程2018-2',
             right_num: 100,
             submit_num: 200,
-            ac: '50%'
+            ac_rate: '50%'
           },
           {
             user_id: '1867111223',
@@ -98,7 +98,7 @@
             class: '计算机科学与技术2018-2',
             right_num: 80,
             submit_num: 100,
-            ac: '80%'
+            ac_rate: '80%'
           },
           {
             user_id: 'admin',
@@ -107,7 +107,7 @@
             class: '软件工程2018-2',
             right_num: 200,
             submit_num: 400,
-            ac: '50%'
+            ac_rate: '50%'
           },
           {
             user_id: '1867111223',
@@ -116,7 +116,7 @@
             class: '计算机科学与技术2018-2',
             right_num: 100,
             submit_num: 1000,
-            ac: '10%'
+            ac_rate: '10%'
           }
         ]
       }
