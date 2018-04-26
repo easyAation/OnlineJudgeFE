@@ -16,7 +16,7 @@
       <Table :columns="head" :data="problem_data"></Table>
     </Card>
     <div slot="panel-page">
-      <Page :total="dataCount" :page-size="pageSize" show-sizer show-total></Page>
+      <Page :total="dataCount" :page-size="pageSize" @on-change="changePage" show-sizer show-total></Page>
     </div>
   </ListPanel>
 </template>
@@ -39,7 +39,7 @@
         // 初始化信息总条数
         dataCount: 0,
         // 每页显示多少条
-        pageSize: 10,
+        pageSize: 20,
         search: {
           info: "",
           select: "id"
@@ -83,13 +83,13 @@
           },
           {
             title: '正确数',
-            key: 'right',
+            key: 'accepted_number',
             width: 150,
             align: 'center'
           },
           {
             title: '提交数',
-            key: 'submit',
+            key: 'submit_number',
             width: 150,
             align: 'center'
           },
@@ -104,12 +104,29 @@
         problem_data: []
       }
     },
+    methods: {
+      getProblems(offset, limit) {
+        api.getProblemList(offset, limit).then(res => {
+          this.problem_data = res.data.data;
+        },res => {
+        }).catch(err => {
+          console.log("error:" + err)
+        })
+      },
+      changePage(index) {
+        let offset = ( index - 1 ) * this.pageSize;
+        let limit = index * this.pageSize;
+        this.getProblems(offset, limit)
+      }
+    },
     created() {
-      api.getProblemList(0, 3).then(res => {
-        this.problem_data = res.data
-      }).catch(err => {
-        console.log("error:" + err)
-      })
+      // api.getProblemCount().then(res => {
+      //   this.dataCount = res.data
+      // }).catch(err => {
+      //   console.log("can not get dataCount:" + err)
+      // });
+      this.dataCount = 100;
+      this.getProblems(0, 20);
     }
   }
 </script>

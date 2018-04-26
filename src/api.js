@@ -2,15 +2,21 @@ import Vue from 'vue'
 import axios from 'axios'
 
 Vue.prototype.$http = axios;
-axios.defaults.baseURL = 'http://localhost:3003';
+axios.defaults.baseURL = 'http://localhost:5000/api';
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 export default {
-  getProblemList (start, end, searchParams) {
+  getProblemCount() {
+    return axios('/problem_count', {
+      method: 'get',
+    })
+  },
+  getProblemList (offset, limit, searchParams) {
+    console.log("get page:" + offset +"  " + limit);
     let params = {
-      start: start,
-      end: end
+      offset: offset,
+      limit: limit
     };
     if (searchParams !== undefined) {
       Object.keys(searchParams).forEach((element) => {
@@ -19,7 +25,7 @@ export default {
         }
       })
     }
-    return axios('/problem_data', {
+    return axios('problems/problem_list', {
       method: 'get',
       params: params
     })
